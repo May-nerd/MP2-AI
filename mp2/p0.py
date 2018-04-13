@@ -2,7 +2,7 @@ from problem import plants, magic_square, magic_series
 from problem import knapsack, vertex_cover
 
 from solver.bf import BruteForceSolver
-from utils import * 
+from utils import *
 
 def test1():
     problem = magic_square.problem(N=3)     # 3,4
@@ -45,7 +45,7 @@ def test4():
     # See check/p0.4.txt for correct answer
 
 def test5():
-    problem = vertex_cover.problem(test_case=0) # 0,1,2,3,4,5
+    problem = vertex_cover.problem(test_case=2) # 0,1,2,3,4,5
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -58,10 +58,10 @@ def test5():
     # See checker/p0.5.txt for correct answer
 
 def test6():
-    problem_name = 'plants'     
+    problem_name = 'plants'
     # problem_name = 'magic_square'
-    option = 'combination'   
-    # option = 'permutation'   
+    option = 'combination'
+    # option = 'permutation'
 
     if problem_name == 'plants':
         problem = plants.problem()
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 1
+    test = 5
 
     if test == 1:
         test1()
