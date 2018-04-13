@@ -1,0 +1,4 @@
+test_case       num_solutions
+0                       15
+1                       29
+2                       30

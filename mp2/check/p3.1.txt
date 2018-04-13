@@ -1,0 +1,17 @@
+CHANGE2 - MAXONE
+    Restarts: 1
+    Total iterations: 12
+    Total neighbors: 42
+    Total legal neighbors: 11
+    Best score: 16
+    1 solutions found
+        16   1111111111111111
+**************************************
+SWAP2 - MAXONE
+    Restarts: 5
+    Total iterations: 250
+    Total neighbors: 250
+    Total legal neighbors: 250
+    Best score: 10
+    1 solutions found
+        10   0100001111111110

@@ -1,0 +1,12 @@
+N = 3
+    Index  0    1    2    3    
+    Series 1    2    1    0    
+    Count  1    2    1    0    
+    ********************************
+    Index  0    1    2    3    
+    Series 2    0    2    0    
+    Count  2    0    2    0    
+N = 4
+    Index  0    1    2    3    4    
+    Series 2    1    2    0    0    
+    Count  2    1    2    0    0  

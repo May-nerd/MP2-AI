@@ -1,0 +1,56 @@
+BruteForceSolver
+	all_different			Choose between permutation  & combination
+	max_iterations			Max number of iterations
+	solution_limit			Max number of solutions, set to 0 to find all
+BacktrackingSolver
+	filter_fn 				Performs filtering
+	max_iterations			Max number of iterations
+	select_variable_fn		Performs variable ordering, selects which variable to assign next
+	solution_limit			Max number of solutions, set to 0 to find all
+	sort_values_fn 			Performs value ordering
+LocalSearchSolver
+	best_fn					Selects solution with best score; choices: min, max
+	best_possible_score		Solver stops early if it finds solution having this score 
+	initial_solution 		Sets initial solution; choices: actual solution dictionary, 'random', 'random_permutation'
+	legal_neighbor_fn 		Selects legal neighbors
+	max_flat_iterations 	Max number of iterations with no score improvement before exiting
+	max_iterations 			Max number of iterations
+	max_restarts 			Max number of restarts
+	neighborhood_fn 		Creates neighbors of current solution
+	objective_fn 			Gives a score for the given solution
+	random_seed 			Used to make experiments with randomness uniform; choices: seed number, None
+	respawn_solution 		Sets initial solution after restart; choices: 'random', 'random_permutation', 'last' (start with last_solution from previous run)
+	selection_fn 			Selects a legal neighbor to be used as next current state
+AnnealingSolver
+	* Everything in LocalSearchSolver also used here
+	* Except: neighborhood_fn, legal_neighbor_fn, selection_fn
+	alpha					Controls temperature update: temperature is multiplied by alpha per iteration
+	compare_fn				Checks whether the generated neighbor is already acceptable
+	max_neighbor_try 		Max number of tries to generate neighbor before exiting
+	max_temperature 		Starting temperature
+	neighbor_generator 		Generates a neighbor one by one (online)
+TabuSolver
+	* Everything in LocalSearchSolver also used here
+	* Except: legal_neighbor_fn (built-in to solver)
+	aspiration				If neighbor is tabu, but score improvement is at least this value, still accepted
+	compare_fn				Checks whether the generated neighbor is already acceptable
+	tabu_tenure				Number of iterations a state is considered tabu
+GeneticSolver
+	best_possible_score		Solver stops early if it finds solution having this score 
+	crossover 				Performs crossover operation
+	feasibility_minimum 	Minimum score given to a feasible solution (no hard constraints)
+	fitness_fn 				Gives a score for the given solution; higher score = always better (unlike objective_fn where 0 could be better, e.g. min)
+	initial_solution 		Sets initial solutions in population; choices: 'random', 'random_permutation'
+	max_flat_iterations 	Max number of iterations with no score improvement before exiting
+	max_iterations 			Max number of iterations
+	max_parent_similarity 	If parents' similarity are more than this value, they're discarded (too similar); range: 0.0 - 1.0
+	max_parent_try  		Max number of tries to generate parents before exiting
+	mutate 					Performs mutation operation
+	population_size 		Sets the size of population
+	prob_crossover 			Probability of crossover
+	prob_mutate 			Probability of mutation
+	random_seed 			Used to make experiments with randomness uniform; choices: seed number, None
+	replace_population 		Dictates how the new generation (population in next iteration) is created
+	select_parents 			Performs selection operation: choosing parents for next generation
+	tournament_k 			Number of random choices to select for tournament selection
+

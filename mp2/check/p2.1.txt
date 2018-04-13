@@ -1,0 +1,38 @@
+CHANGE2
+    Restart #0
+    1 5     {'V': 4, 'C': 1, 'R': 2, 'S': 5, 'T': 3}
+         260 neighbors
+         135 legal neighbors
+    2 1     {'C': 4, 'R': 2, 'S': 5, 'T': 3, 'V': 1}
+         260 neighbors
+         1 legal neighbors
+    Found best possible solution: {'V': 5, 'C': 4, 'R': 2, 'S': 1, 'T': 3}
+    Found best possible solution: {'V': 5, 'C': 4, 'R': 2, 'S': 1, 'T': 3}
+    Restarts: 1
+    Total iterations: 3
+    Total neighbors: 520
+    Total legal neighbors: 136
+    Best score: 0
+    1 solutions found
+        S         R         T         C         V         
+        1         2         3         4         5         
+****************************************************
+SWAP2
+    Restart #0
+    1 5     {'V': 4, 'C': 1, 'R': 2, 'S': 5, 'T': 3}
+         10 neighbors
+         8 legal neighbors
+    2 1     {'C': 4, 'R': 2, 'S': 5, 'T': 3, 'V': 1}
+         10 neighbors
+         1 legal neighbors
+    Found best possible solution: {'V': 5, 'C': 4, 'R': 2, 'S': 1, 'T': 3}
+    Found best possible solution: {'V': 5, 'C': 4, 'R': 2, 'S': 1, 'T': 3}
+    Restarts: 1
+    Total iterations: 3
+    Total neighbors: 20
+    Total legal neighbors: 9
+    Best score: 0
+    1 solutions found
+        S         R         T         C         V         
+        1         2         3         4         5       
+

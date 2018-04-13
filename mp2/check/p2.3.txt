@@ -1,0 +1,20 @@
+KNAPSACK, CHANGE1
+    Restarts: 20
+    Total iterations: 73
+    Total neighbors: 1460
+    Total legal neighbors: 382
+    Best score: 720
+    1 solutions found
+        In                                   [P91, 17K]                                   [P23, 3K]      [P97, 13K]     [P87, 4K]                                    [P37, 9K]      [P75, 20K]     [P69, 2K]                     [P43, 6K]      [P51, 14K]                    [P41, 18K]     [P21, 27K]     [P85, 12K]     
+        Out    [P7, 7K]       [P13, 8K]                     [P5, 19K]      [P39, 22K]                                                  [P11, 23K]     [P57, 30K]                                                  [P17, 25K]                                   [P25, 11K]                                                  
+        Weight 145 / 150
+        Value  P720
+****************************************************************************************************
+VERTEX COVER, CHANGE1
+    Restarts: 20
+    Total iterations: 24
+    Total neighbors: 336
+    Total legal neighbors: 8
+    Best score: 9
+    1 solutions found
+        valid     9    A,C,E,F,G,H,J,K,M

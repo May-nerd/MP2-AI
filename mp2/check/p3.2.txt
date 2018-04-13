@@ -1,0 +1,19 @@
+KNAPSACK
+    Total iterations: 50
+    Total neighbors: 910
+    Total legal neighbors: 45
+    Best score: 751
+    1 solutions found
+        In                    [P13, 8K]      [P91, 17K]                    [P39, 22K]     [P23, 3K]      [P97, 13K]     [P87, 4K]                                    [P37, 9K]      [P75, 20K]     [P69, 2K]                     [P43, 6K]      [P51, 14K]                    [P41, 18K]                    [P85, 12K]     
+        Out    [P7, 7K]                                     [P5, 19K]                                                                  [P11, 23K]     [P57, 30K]                                                  [P17, 25K]                                   [P25, 11K]                    [P21, 27K]                    
+        Weight 148 / 150
+        Value  P751
+****************************************************************************************************
+VERTEX COVER
+    Total iterations: 35
+    Total neighbors: 587
+    Total legal neighbors: 30
+    Best score: 9
+    1 solutions found
+        valid     9    B,C,E,G,H,I,J,K,M
+

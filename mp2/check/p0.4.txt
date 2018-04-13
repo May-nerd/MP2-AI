@@ -1,0 +1,4 @@
+test_case       num_solutions
+0                       11
+1                       23
+2                   16,834
