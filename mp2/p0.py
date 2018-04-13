@@ -58,10 +58,10 @@ def test5():
     # See checker/p0.5.txt for correct answer
 
 def test6():
-    problem_name = 'plants'     
-    # problem_name = 'magic_square'
-    option = 'combination'   
-    # option = 'permutation'   
+    # problem_name = 'plants'     
+    problem_name = 'magic_square'
+    # option = 'combination'   
+    option = 'permutation'   
 
     if problem_name == 'plants':
         problem = plants.problem()
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 3
+    test = 6
 
     if test == 1:
         test1()
