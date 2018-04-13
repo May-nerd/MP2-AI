@@ -126,6 +126,14 @@ class MagicSeries(Constraint):
 	def test(self,solution):
 		values = self.get_assigned_values(solution)
 
+		if(len(values) != len(self.variables)):
+			return True
+
+		for var in self.variables:
+			if(values.count(var) != values[var]):
+				return False
+
+		return True
 		# INSERT CODE HERE
 		# test only if all vars assigned
 		# check that each index follows magic series property
