@@ -5,7 +5,7 @@ from solver.bf import BruteForceSolver
 from utils import * 
 
 def test1():
-    problem = magic_square.problem(N=3)     # 3,4
+    problem = magic_square.problem(N=4)     # 3,4
     problem.display()
     # See check/p0.1.txt for correct answer
 
