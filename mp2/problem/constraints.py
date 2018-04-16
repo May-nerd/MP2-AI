@@ -174,7 +174,24 @@ class KnapsackCapacity(Constraint):
 		# check that total weight of items included in solution doesn't exceed capacity
 		# return True / False
 		total_weight = 0
+<<<<<<< HEAD
+		for item in solution:
+			if(solution[item]==1):
+				total_weight+=item.weight
+		if(total_weight <= self.capacity):
+			return True
 
+		# print(total_weight)
+
+			
+
+		# print("Total weight: ")
+		# print(solution.weight)
+		
+		
+=======
+
+>>>>>>> ba83f16b59dd89008a7071759df3d93ffc1a15d9
 
 ### Vertex Cover Constraints ###
 
