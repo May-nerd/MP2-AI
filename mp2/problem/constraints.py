@@ -121,6 +121,20 @@ class ExactSum(Constraint):
 
 		# for var in self.variables:
 		# 	print(var)
+			# if(values[var] is None):
+			# 	return False
+			# sum = sum + values[var]
+
+		if len(values) != 3:
+			return False
+
+		sum = 0
+		for val in values:
+			sum = sum + val
+
+		return sum == self.target_sum
+		
+
 
 ### Magic Series Constraints ###
 
