@@ -1,4 +1,4 @@
-import random 
+import random
 import itertools
 
 ### NEIGHBORHOOD FUNCTIONS ###
@@ -10,7 +10,7 @@ def change_one_value(state):
 	neighbors = []
 	for var in problem.variables:			# Try each variable
 		for value in problem.domain[var]:	# Try each value
-			if value == solution[var]: 
+			if value == solution[var]:
 				continue 					# dont reassign to current value
 
 			neighbor = state.copy()
@@ -25,24 +25,44 @@ def change_upto_two_values(state):
 	solution = state.solution
 
 	neighbors = change_one_value(state)
+	for var in itertools.combinations(problem.variables, 2):
+		domain_a = []
+		domain_b = []
+		for value in problem.domain[var[0]]:
+			domain_a.append(value)
+		for value in problem.domain[var[1]]:
+			domain_b.append(value)
+		for value in itertools.product(domain_a, domain_b):
+			if value[0] == solution[var[0]]:
+				continue
+			if value[1] == solution[var[1]]:
+				continue
+			neighbor = state.copy()
+			neighbor.solution[var[0]] = value[0]
+			neighbor.solution[var[1]] = value[1]
+			neighbor.changes = [(var[0], value[0]), (var[1], value[1])]
+			neighbors.append(neighbor)
+	return neighbors
+
 
 	# INSERT CODE HERE
 	# could change one value or two values
-	# Hints for changing 2 values: 
+	# Hints for changing 2 values:
 	# use itertools.combinations and itertools.product
 	# dont reassign to current values
-	# update neighbor.changes 
+	# update neighbor.changes
+
 
 
 def swap_two_values(state):
 	problem = state.problem
 	solution = state.solution
-	
+
 	# INSERT CODE HERE
-	# Hints: 
+	# Hints:
 	# use itertools.combinations
 	# dont swap same values
-	# update neighbor.changes 
+	# update neighbor.changes
 
 
 ### NEIGHBOR GENERATORS ###
@@ -65,9 +85,9 @@ def change_upto_two_values_generator(state):
 	solution = state.solution
 
 	# INSERT CODE HERE
-	# Hints: 
+	# Hints:
 	# Randomly select variables & values
-	# update neighbor.changes 
+	# update neighbor.changes
 	# yield neighbor
 
 
@@ -76,9 +96,9 @@ def swap_two_values_generator(state):
 	solution = state.solution
 
 	# INSERT CODE HERE
-	# Hints: 
+	# Hints:
 	# Randomly select variables to swap
-	# update neighbor.changes 
+	# update neighbor.changes
 	# yield neighbor
 
 ### MAX-MIN CONFLICT ###
@@ -137,7 +157,7 @@ def max_min_conflict(state):
 def legal_neighbors(state,neighbors,comparison_fn):
 	legal_neighbors = []
 	for neighbor in neighbors:
-		if comparison_fn(state,neighbor): 
+		if comparison_fn(state,neighbor):
 			legal_neighbors.append(neighbor)
 	return legal_neighbors
 
@@ -165,7 +185,7 @@ def non_decreasing(state,neighbors):
 
 def no_checking(state,neighbor):
 	return True
-	
+
 def less_than(state,neighbor):
 	return neighbor.score < state.score
 

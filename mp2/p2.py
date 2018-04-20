@@ -29,7 +29,7 @@ def test1():
         config.neighborhood_fn = swap_two_values
 
     reverse = True # downhill
-    hill_climbing_config(config,reverse) 
+    hill_climbing_config(config,reverse)
 
     config.objective_fn = count_violations
     config.best_fn = min
@@ -169,7 +169,7 @@ def test5():
     # tenure = 5
     # tenure = 7
 
-    
+
     config = common_config()
     config.initial_solution = 'random'
     config.respawn_solution = 'random'
@@ -192,7 +192,7 @@ def test5():
     solver = TabuSolver(problem,config)
     solver.solve()
     display_solutions(problem,solver)
-  
+
 def select_problem(problem_name):
     if problem_name == 'plants':
         problem = plants.problem()
@@ -231,7 +231,7 @@ def random_walking_config(config,reverse):
         config.legal_neighbor_fn = non_increasing
     else: # uphill
         config.legal_neighbor_fn = non_decreasing
-    
+
 def min_conflict_config(config):
     config.neighborhood_fn = min_conflict
     config.legal_neighbor_fn = all_neighbors
@@ -251,7 +251,7 @@ def knapsack_config(config,problem):
     config.objective_fn = knapsack_objective
     config.best_fn = max
     config.best_possible_score = problem.total_value
-    
+
 def vertex_cover_config(config):
     config.objective_fn = vertex_cover_objective
     config.best_fn = min
@@ -277,4 +277,3 @@ if __name__ == '__main__':
     end = time.time()
     elapsed = end - start
     print('Test %d, Time elapsed: %ds' % (test,elapsed))
-
