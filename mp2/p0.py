@@ -32,7 +32,7 @@ def test3():
     # See check/p0.3.txt for correct answer
 
 def test4():
-    problem = knapsack.problem(test_case=2) # 0,1,2,3
+    problem = knapsack.problem(test_case=3) # 0,1,2,3
     problem.display()
 
     solver = brute_force_solver(problem)

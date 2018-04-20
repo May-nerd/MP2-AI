@@ -25,15 +25,14 @@ def change_upto_two_values(state):
 	solution = state.solution
 
 	neighbors = change_one_value(state)
+	count = 0
 	for var in itertools.combinations(problem.variables, 2):
 		domain_a = problem.domain[var[0]]
 		domain_b = problem.domain[var[1]]
-
 		for value in itertools.product(domain_a, domain_b):
-			if value[0] == solution[var[0]]:
+			if value[0] == solution[var[0]] and value[1] == solution[var[1]]:
 				continue
-			if value[1] == solution[var[1]]:
-				continue
+			count = count + 1
 			neighbor = state.copy()
 			neighbor.solution[var[0]] = value[0]
 			neighbor.solution[var[1]] = value[1]
@@ -55,8 +54,18 @@ def swap_two_values(state):
 	problem = state.problem
 	solution = state.solution
 
-        for value in itertools.product(problem.variables, 2):
-            print("something")
+	neighbors = []
+	for var in itertools.combinations(problem.variables, 2):
+		if solution[var[0]] != solution[var[1]]:
+			neighbor = state.copy()
+			temp = neighbor.solution[var[0]]
+			neighbor.solution[var[0]] = neighbor.solution[var[1]]
+			neighbor.solution[var[1]] = temp
+			neighbor.changes = [(var[0], neighbor.solution[var[0]]), (var[1], neighbor.solution[var[1]])]
+			neighbors.append(neighbor)
+	return neighbors
+
+
 	# INSERT CODE HERE
 	# Hints:
 	# use itertools.combinations

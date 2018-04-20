@@ -12,7 +12,8 @@ PART 0: CONSTRAINTS
     QnA: 1/1
 3.NUJ: DONE
 	QnA: 2/2
-4.
+4.Eric: DONE
+    QnA: 2/2
 5.BELT: DONE
     Qna: 1/2
 6.NUJ: DONE
@@ -29,9 +30,9 @@ PART 1: BACKTRACKING
 
 PART 2: LOCAL SEARCH
 1.BELT: PROCESSING
-    QnA: 0/2
-2.
-3.
+    QnA: 0/3 (Including the table)
+2.BELT: PROCESSING
+3. EJFlow Processing
 4.
 5.
 
