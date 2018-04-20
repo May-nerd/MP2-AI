@@ -18,8 +18,8 @@ def test1():
     # solver_name = 'brute_force'
     solver_name = 'backtracking'
 
-    # solution_limit = 0
-    solution_limit = 1
+    solution_limit = 0
+    # solution_limit = 1
 
     problem = select_problem(problem_name)
 
