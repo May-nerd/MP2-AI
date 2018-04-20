@@ -20,8 +20,8 @@ def test1():
     problem = plants.problem()
     config = common_config()
 
-    neighborhood_name = 'change2'
-    # neighborhood_name = 'swap2'
+    # neighborhood_name = 'change2'
+    neighborhood_name = 'swap2'
 
     if neighborhood_name == 'change2':
         config.neighborhood_fn = change_upto_two_values
@@ -44,16 +44,16 @@ def test1():
     # See check/p2.1.txt for correct answer
 
 def test2():
-    problem_name = 'plants'
-    # problem_name = 'einstein'
+    # problem_name = 'plants'
+    problem_name = 'einstein'
     # problem_name = 'magic_square'
     # problem_name = 'magic_series'
 
     # neighborhood_name = 'change1'
-    # neighborhood_name = 'change2'
+    neighborhood_name = 'change2'
     # neighborhood_name = 'swap2'
     # neighborhood_name = 'min_conflict'
-    neighborhood_name = 'max_min_conflict'
+    # neighborhood_name = 'max_min_conflict'
 
     config = common_config()
     config.objective_fn = count_violations

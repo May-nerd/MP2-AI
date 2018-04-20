@@ -45,16 +45,16 @@ def test1():
 def test2():
     # problem_name = 'plants'
     # problem_name = 'einstein'
-    # problem_name = 'magic_square'
+    problem_name = 'magic_square'
     # problem_name = 'magic_series'
     # problem_name = 'knapsack'
-    problem_name = 'vertex_cover'
+    # problem_name = 'vertex_cover'
 
     # option = 'with_filtering'
     option = 'no_filtering'
 
-    # solution_limit = 0
-    solution_limit = 1
+    solution_limit = 0
+    # solution_limit = 1
 
     problem = select_problem(problem_name)
 

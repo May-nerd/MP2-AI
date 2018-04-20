@@ -26,9 +26,9 @@ PART 1: BACKTRACKING
 3.
 
 PART 2: LOCAL SEARCH
-1.BELT: PROCESSING
-    QnA: 0/2
-2.
+1.BELT: DONE
+    QnA: 0/3 (Including the table)
+2.BELT: PROCESSING
 3.
 4.
 5.
