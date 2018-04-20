@@ -180,14 +180,6 @@ class KnapsackCapacity(Constraint):
 				total_weight+=item.weight
 		if(total_weight <= self.capacity):
 			return True
-
-		# print(total_weight)
-
-			
-
-		# print("Total weight: ")
-		# print(solution.weight)
-		
 		
 
 ### Vertex Cover Constraints ###

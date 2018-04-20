@@ -49,11 +49,11 @@ def test2():
     # problem_name = 'magic_square'
     # problem_name = 'magic_series'
 
-    neighborhood_name = 'change1'
+    # neighborhood_name = 'change1'
     # neighborhood_name = 'change2'
     # neighborhood_name = 'swap2'
     # neighborhood_name = 'min_conflict'
-    # neighborhood_name = 'max_min_conflict'
+    neighborhood_name = 'max_min_conflict'
 
     config = common_config()
     config.objective_fn = count_violations
@@ -261,7 +261,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 1
+    test = 2
 
     if test == 1:
         test1()

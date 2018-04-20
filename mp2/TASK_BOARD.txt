@@ -11,7 +11,8 @@ PART 0: CONSTRAINTS
 2.MAYNARD: DONE
     QnA: 1/1
 3
-4.
+4.Eric: DONE
+    QnA: 2/2
 5.BELT: DONE
     Qna: 1/2
 6.
