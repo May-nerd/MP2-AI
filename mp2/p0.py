@@ -32,7 +32,7 @@ def test3():
     # See check/p0.3.txt for correct answer
 
 def test4():
-    problem = knapsack.problem(test_case=2) # 0,1,2,3
+    problem = knapsack.problem(test_case=3) # 0,1,2,3
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -90,12 +90,8 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-<<<<<<< HEAD
-    test = 2
-=======
-    test = 1
+    test = 4
 
->>>>>>> 34c2c855ead7b65c07a0d106cbce4e1828e7cf91
     if test == 1:
         test1()
     elif test == 2:

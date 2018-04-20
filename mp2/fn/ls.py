@@ -55,8 +55,8 @@ def swap_two_values(state):
 	problem = state.problem
 	solution = state.solution
 
-        for value in itertools.product(problem.variables, 2):
-            print("something")
+	for value in itertools.product(problem.variables, 2):
+		print("something")
 	# INSERT CODE HERE
 	# Hints:
 	# use itertools.combinations
