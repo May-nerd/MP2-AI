@@ -17,8 +17,8 @@ PART 0: CONSTRAINTS
 6.
 
 PART 1: BACKTRACKING
-1.MAYNARD: DOING
-    QnA: 0/3
+1.MAYNARD: DONE
+    QnA: 2/3
 
 2.BELT: DONE(Need to Check tho)
     QnA: 0/2

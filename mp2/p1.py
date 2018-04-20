@@ -9,9 +9,9 @@ from utils import *
 
 
 def test1():
-    # problem_name = 'plants'
+    problem_name = 'plants'
     # problem_name = 'magic_square'
-    problem_name = 'magic_series'
+    # problem_name = 'magic_series'
     # problem_name = 'knapsack'
     # problem_name = 'vertex_cover'
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 1
 
     if test == 1:
         test1()
