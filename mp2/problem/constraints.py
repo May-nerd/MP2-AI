@@ -125,8 +125,9 @@ class ExactSum(Constraint):
 			# 	return False
 			# sum = sum + values[var]
 
-		if len(values) != 3:
-			return False
+
+		if len(values) != len(self.variables):
+			return True
 
 		sum = 0
 		for val in values:
