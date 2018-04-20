@@ -26,10 +26,10 @@ PART 1: BACKTRACKING
 3.
 
 PART 2: LOCAL SEARCH
-1.BELT: DONE
+1.BELT: PROCESSING
     QnA: 0/3 (Including the table)
 2.BELT: PROCESSING
-3.
+3. EJFlow Processing
 4.
 5.
 
