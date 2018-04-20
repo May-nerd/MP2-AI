@@ -10,11 +10,14 @@ PART 0: CONSTRAINTS
 
 2.MAYNARD: DONE
     QnA: 1/1
-3
-4.
+3.NUJ: DONE
+	QnA: 2/2
+4.Eric: DONE
+    QnA: 2/2
 5.BELT: DONE
     Qna: 1/2
-6.
+6.NUJ: DONE
+	QnA: 2/2
 
 PART 1: BACKTRACKING
 1.MAYNARD: DONE
@@ -22,13 +25,14 @@ PART 1: BACKTRACKING
 
 2.BELT: DONE(Need to Check tho)
     QnA: 0/2
-3.
+3.NUJ: DEVELOPING STORY
+	QnA: 0/4
 
 PART 2: LOCAL SEARCH
 1.BELT: PROCESSING
-    QnA: 0/2
-2.
-3.
+    QnA: 0/3 (Including the table)
+2.BELT: PROCESSING
+3. EJFlow Processing
 4.
 5.
 
