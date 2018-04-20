@@ -7,24 +7,26 @@ please indicate if done
 PART 0: CONSTRAINTS
 1.MAYNARD: DONE
     QnA: 0/0
-    
+
 2.MAYNARD: DONE
     QnA: 1/1
 3
 4.
-5.
+5.BELT: DONE
+    Qna: 1/2
 6.
 
 PART 1: BACKTRACKING
 1.MAYNARD: DOING
     QnA: 0/3
-    
-2.
+
+2.BELT: DONE(Need to Check tho)
+    QnA: 0/2
 3.
-4.
 
 PART 2: LOCAL SEARCH
-1.
+1.BELT: PROCESSING
+    QnA: 0/2
 2.
 3.
 4.
@@ -40,6 +42,3 @@ PART 3: ADVANCED LOCAL SEARCH
 PART 4: GENETIC ALGORITHMS
 1.
 2.
-
-
-
