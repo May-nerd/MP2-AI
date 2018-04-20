@@ -90,7 +90,12 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
+<<<<<<< HEAD
     test = 2
+=======
+    test = 1
+
+>>>>>>> 34c2c855ead7b65c07a0d106cbce4e1828e7cf91
     if test == 1:
         test1()
     elif test == 2:
