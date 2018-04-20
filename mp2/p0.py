@@ -21,11 +21,7 @@ def test2():
     # See check/p0.2.txt for correct answer
 
 def test3():
-<<<<<<< HEAD
     problem = magic_series.problem(N=4) # 3,4,5,6
-=======
-    problem = magic_series.problem(N=3) # 3,4,5,6
->>>>>>> 78876107ea1ba2587266a57f8bf05b19bf5d9213
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -95,10 +91,6 @@ if __name__ == '__main__':
     start = time.time()
 
     test = 3
-<<<<<<< HEAD
-=======
-
->>>>>>> 78876107ea1ba2587266a57f8bf05b19bf5d9213
     if test == 1:
         test1()
     elif test == 2:
