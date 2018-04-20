@@ -5,7 +5,7 @@ from solver.bf import BruteForceSolver
 from utils import *
 
 def test1():
-    problem = magic_square.problem(N=3)     # 3,4
+    problem = magic_square.problem(N=4)     # 3,4
     problem.display()
     # See check/p0.1.txt for correct answer
 
@@ -32,7 +32,7 @@ def test3():
     # See check/p0.3.txt for correct answer
 
 def test4():
-    problem = knapsack.problem(test_case=0) # 0,1,2,3
+    problem = knapsack.problem(test_case=2) # 0,1,2,3
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -58,10 +58,17 @@ def test5():
     # See checker/p0.5.txt for correct answer
 
 def test6():
+<<<<<<< HEAD
     problem_name = 'plants'
     # problem_name = 'magic_square'
     option = 'combination'
     # option = 'permutation'
+=======
+    # problem_name = 'plants'     
+    problem_name = 'magic_square'
+    # option = 'combination'   
+    option = 'permutation'   
+>>>>>>> 08f3395e2642c4d0362ef60888a0cc4ae4abf13f
 
     if problem_name == 'plants':
         problem = plants.problem()
@@ -90,7 +97,16 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
+<<<<<<< HEAD
     test = 5
+=======
+<<<<<<< HEAD
+    test = 2
+=======
+    test = 4
+
+>>>>>>> a53b21e3c9f8b263c2c2030440a6d86c3c36c954
+>>>>>>> 08f3395e2642c4d0362ef60888a0cc4ae4abf13f
 
     if test == 1:
         test1()
