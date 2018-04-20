@@ -127,11 +127,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-<<<<<<< HEAD
     test = 1
-=======
-    test = 3
->>>>>>> 78876107ea1ba2587266a57f8bf05b19bf5d9213
 
     if test == 1:
         test1()
