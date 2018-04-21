@@ -27,8 +27,8 @@ def select_problem(problem_name,config):
 def main():
     config = Config()
 
-    problem_name = 'maxone'
-    # problem_name = 'knapsack'
+    # problem_name = 'maxone'
+    problem_name = 'knapsack'
     # problem_name = 'vertex_cover'
 
     problem = select_problem(problem_name,config)

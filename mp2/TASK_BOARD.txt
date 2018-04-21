@@ -33,7 +33,8 @@ PART 2: LOCAL SEARCH
     QnA: 0/3 (Including the table)
 2.BELT: PROCESSING
 3. EJFlow Processing
-4.
+4.NO ONE: PROCESSING <- Dependent on other numbers
+    QnA: 0/4
 5.
 
 
@@ -44,5 +45,6 @@ PART 3: ADVANCED LOCAL SEARCH
 4.
 
 PART 4: GENETIC ALGORITHMS
-1.
+1. MAYNARD: DONE
+
 2.
