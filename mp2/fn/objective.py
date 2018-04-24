@@ -66,9 +66,14 @@ def vertex_cover_objective(state):
 	solution = state.solution 
 
 	# INSERT CODE HERE
-
+	count = 0
 	if(problem.find_hard_violation(solution)!=None):
-		return Decimal('inf')
+		return float('inf')
+	else:
+		for i in solution:
+			if(solution[i]==1):
+				count+=1
+		return count
 
 	# If solution violates hard constraint, score should be infinity (invalid) -- worst score for min
 	# Hint: use problem.find_hard_violation

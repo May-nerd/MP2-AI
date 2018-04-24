@@ -83,8 +83,8 @@ def test2():
     display_solutions(problem,solver)
 
 def test3():
-    problem_name = 'knapsack'
-    # problem_name = 'vertex_cover'
+    # problem_name = 'knapsack'
+    problem_name = 'vertex_cover'
 
     # neighborhood_name = 'change1'
     # neighborhood_name = 'change2'
