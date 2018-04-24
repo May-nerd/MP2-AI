@@ -44,7 +44,6 @@ def test1():
 
 def test2():
     # problem_name = 'plants'
-<<<<<<< HEAD
     problem_name = 'einstein'
     # problem_name = 'magic_square'
     # problem_name = 'magic_series'
@@ -127,7 +126,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 1
+    test = 3
 
     if test == 1:
         test1()
