@@ -157,6 +157,11 @@ class GeneticSolver:
 
 		return population
 
+	def getBestScore(self):
+		return self.best_score
+
+	def getIteration(self):
+		return self.iterations
 
 def get_score(state):
 	return state.score
