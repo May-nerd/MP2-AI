@@ -41,9 +41,13 @@ def knapsack_objective(state):
 	problem = state.problem
 	solution = state.solution
 
+	# if(problem.find_hard_violation(solution)):
+	# print(problem.find_hard_violation(solution))
+
 	# INSERT CODE HERE
 	# If solution violates hard constraint, score should be 0 (invalid) -- worst score for max
 	# Hint: use problem.find_hard_violation
+	
 	# Compute total value of items included in knapsack based on the solution
 
 
