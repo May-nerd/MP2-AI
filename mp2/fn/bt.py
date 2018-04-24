@@ -29,11 +29,11 @@ def custom_variable_selector(state):
 	# ++++++++++++++++++++++++++++++++++++++++
 	# HEURISTIC 1
 	minimum = unassigned_vars[0]
-	# if(len(domain[minimum]) == 0):
-	# 	return minimum	
-	# for var in unassigned_vars:
-	# 	if(len(domain[var]) < len(domain[minimum])):
-	# 		minimum = var
+	if(len(domain[minimum]) == 0):
+		return minimum	
+	for var in unassigned_vars:
+		if(len(domain[var]) < len(domain[minimum])):
+			minimum = var
 	return minimum
 	# ++++++++++++++++++++++++++++++++++++++++
 
@@ -77,8 +77,11 @@ def custom_value_ordering(state,variable):
 	# INSERT CODE HERE
 	# Write your value ordering code here 
 	# Return sorted values, accdg. to some heuristic
-	# values = domain
-	print("domain", domain)
+
+	new_state = state.copy()
+	new_domain = new_state.domain[variable]
+	print('values: ', domain)
+	print('new_state', new_state)
 
 	return domain
 	# Suggestions:
