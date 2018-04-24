@@ -5,7 +5,7 @@ from solver.bf import BruteForceSolver
 from utils import *
 
 def test1():
-    problem = magic_square.problem(N=4)     # 3,4
+    problem = magic_square.problem(N=3)     # 3,4
     problem.display()
     # See check/p0.1.txt for correct answer
 
@@ -21,7 +21,7 @@ def test2():
     # See check/p0.2.txt for correct answer
 
 def test3():
-    problem = magic_series.problem(N=6) # 3,4,5,6
+    problem = magic_series.problem(N=4) # 3,4,5,6
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -45,7 +45,7 @@ def test4():
     # See check/p0.4.txt for correct answer
 
 def test5():
-    problem = vertex_cover.problem(test_case=2) # 0,1,2,3,4,5
+    problem = vertex_cover.problem(test_case=4) # 0,1,2,3,4,5
     problem.display()
 
     solver = brute_force_solver(problem)
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 3
     if test == 1:
         test1()
     elif test == 2:

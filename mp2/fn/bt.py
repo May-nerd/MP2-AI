@@ -25,6 +25,29 @@ def custom_variable_selector(state):
 	# Write your variable ordering code here 
 	# Return an unassigned variable 
 
+	unassigned_vars = problem.unassigned_variables(solution)
+	# ++++++++++++++++++++++++++++++++++++++++
+	# HEURISTIC 1
+	minimum = unassigned_vars[0]
+	if(len(domain[minimum]) == 0):
+		return minimum	
+	for var in unassigned_vars:
+		if(len(domain[var]) < len(domain[minimum])):
+			minimum = var
+	return minimum
+	# ++++++++++++++++++++++++++++++++++++++++
+
+	# ++++++++++++++++++++++++++++++++++++++++
+	# HEURISTIC 2
+	# maximum = unassigned_vars[0]
+	# for var in unassigned_vars:
+	# 	if(len(domain[var]) > len(domain[maximum])):
+	# 		maximum = var
+	# return unassigned_vars[0]
+	# ++++++++++++++++++++++++++++++++++++++++
+
+
+
 	# Suggestions: 
 	# Heuristic 1: minimum remaining values = select variables with fewer values left in domain
 	# Heuristic 2: degree heuristic = select variables related to more constraints
@@ -55,6 +78,12 @@ def custom_value_ordering(state,variable):
 	# Write your value ordering code here 
 	# Return sorted values, accdg. to some heuristic
 
+	new_state = state.copy()
+	new_domain = new_state.domain[variable]
+	print('values: ', domain)
+	print('new_state', new_state)
+
+	return domain
 	# Suggestions:
 	# Heuristic: least constraining value (LCV)
 	# LCV = prioritize values that filter out fewer values in other variables' domains
