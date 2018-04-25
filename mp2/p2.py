@@ -83,12 +83,12 @@ def test2():
     display_solutions(problem,solver)
 
 def test3():
-    problem_name = 'knapsack'
-    # problem_name = 'vertex_cover'
+    # problem_name = 'knapsack'
+    problem_name = 'vertex_cover'
 
-    neighborhood_name = 'change1'
+    # neighborhood_name = 'change1'
     # neighborhood_name = 'change2'
-    # neighborhood_name = 'swap2'
+    neighborhood_name = 'swap2'
 
     # see check/p2.3.txt to see results for change1
 
@@ -261,7 +261,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 3
 
     if test == 1:
         test1()
