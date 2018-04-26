@@ -6,34 +6,34 @@ def first_unassigned(state):
 	problem = state.problem
 	solution = state.solution
 
-	unassigned_vars = problem.unassigned_variables(solution)	
+	unassigned_vars = problem.unassigned_variables(solution)
 	return unassigned_vars[0]
 
 def random_unassigned(state):
 	problem = state.problem
 	solution = state.solution
 
-	unassigned_vars = problem.unassigned_variables(solution)	
+	unassigned_vars = problem.unassigned_variables(solution)
 	return random.choice(unassigned_vars)
 
 def custom_variable_selector(state):
 	problem = state.problem
 	solution = state.solution
-	domain = state.domain 
+	domain = state.domain
 
 	# INSERT CODE HERE
-	# Write your variable ordering code here 
-	# Return an unassigned variable 
+	# Write your variable ordering code here
+	# Return an unassigned variable
 
 	unassigned_vars = problem.unassigned_variables(solution)
 	# ++++++++++++++++++++++++++++++++++++++++
 	# HEURISTIC 1
 	minimum = unassigned_vars[0]
-	# if(len(domain[minimum]) == 0):
-	# 	return minimum	
-	# for var in unassigned_vars:
-	# 	if(len(domain[var]) < len(domain[minimum])):
-	# 		minimum = var
+	if(len(domain[minimum]) == 0):
+		return minimum
+	for var in unassigned_vars:
+		if(len(domain[var]) < len(domain[minimum])):
+			minimum = var
 	return minimum
 	# ++++++++++++++++++++++++++++++++++++++++
 
@@ -48,7 +48,7 @@ def custom_variable_selector(state):
 
 
 
-	# Suggestions: 
+	# Suggestions:
 	# Heuristic 1: minimum remaining values = select variables with fewer values left in domain
 	# Heuristic 2: degree heuristic = select variables related to more constraints
 	# Can use just one heuristic, or chain together heuristics (tie-break)
@@ -75,10 +75,26 @@ def custom_value_ordering(state,variable):
 	domain = state.domain[variable]
 
 	# INSERT CODE HERE
-	# Write your value ordering code here 
+	# Write your value ordering code here
 	# Return sorted values, accdg. to some heuristic
-	# values = domain
-	print("domain", domain)
+	pairValue = {}
+	finalDomain = []
+	for value in domain:
+		new_state = state.copy()
+		new_state.assign(value, variable)
+		print('change1', new_state.domain)
+		for var  in problem.unassigned_variables(new_state.solution):
+			forward_checking(new_state, var)
+			print('change2',var, new_state.domain)
+
+
+	# sorted(pairValue.items(), key=lambda x: x[1])
+	# for key,value in pairValue.items():
+	# 	finalDomain.append(key)
+	# print(finalDomain)
+	# print('values: ', domain)
+	# print()
+
 
 	return domain
 	# Suggestions:
@@ -103,16 +119,16 @@ def forward_checking(state,variable):
 
 		for other_var in constraint.variables:
 			if other_var == variable: continue # skip self
-			if other_var in solution: continue # skip assigned 
+			if other_var in solution: continue # skip assigned
 
 			valid_values = []
 			for value in state.domain[other_var]:
 				new_solution = solution.copy()
-				new_solution[other_var] = value 
+				new_solution[other_var] = value
 
 				pass_test = constraint.test(new_solution)
 				if pass_test:
 					valid_values.append(value)
 
 			state.domain[other_var] = valid_values
-
+	

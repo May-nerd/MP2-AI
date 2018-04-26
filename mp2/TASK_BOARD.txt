@@ -29,19 +29,20 @@ PART 1: BACKTRACKING
 	QnA: 0/4
 
 PART 2: LOCAL SEARCH
-1.BELT: PROCESSING
+1.BELT: DONE
     QnA: 0/3 (Including the table)
-2.BELT: PROCESSING
-3. EJFlow Processing
-4.NO ONE: PROCESSING <- Dependent on other numbers
-    QnA: 0/4
-5.
-
+2.BELT: DONE
+3.EJFlow: DONE
+    QnA: 2/2 (RECHECK NEED) <- Checked by BELT OK
+4.EJFLow: ALMOST <- Dependent on other numbers
+    QnA: 1/4 (3/4 are descriptive)
+5.EJFlow: ALMOST
+    QnA: 1/2 (1/2 needs explanation)
 
 PART 3: ADVANCED LOCAL SEARCH
 1. BELT: DONE
-2. BELT: PROCESSING
-3.
+2. BELT: DONE
+3. BELT: PROCESSING
 4.
 
 PART 4: GENETIC ALGORITHMS

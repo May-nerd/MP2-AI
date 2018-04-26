@@ -36,23 +36,42 @@ def maxone_objective(state):
 		count += solution[var] # 0 or 1
 	return count
 
-def knapsack_objective(state): 
+def knapsack_objective(state):
 	""" Total value of items inside knapsack based on solution """
+	problem = state.problem
+	solution = state.solution
+	
+	# INSERT CODE HERE
+	score=0
+	if(problem.find_hard_violation(solution)!=None):
+		return score
+	else:
+		for i in solution:
+			if(solution[i]==1):
+				score += i.value
+		return score
+
+	# If solution violates hard constraint, score should be 0 (invalid) -- worst score for max
+	# Hint: use problem.find_hard_violation
+
+	# Compute total value of items included in knapsack based on the solution
+
+
+def vertex_cover_objective(state):
+	""" Number of vertices used in solution """
 	problem = state.problem
 	solution = state.solution
 
 	# INSERT CODE HERE
-	# If solution violates hard constraint, score should be 0 (invalid) -- worst score for max
-	# Hint: use problem.find_hard_violation
-	# Compute total value of items included in knapsack based on the solution
+	count = 0
+	if(problem.find_hard_violation(solution)!=None):
+		return float('inf')
+	else:
+		for i in solution:
+			if(solution[i]==1):
+				count+=1
+		return count
 
-
-def vertex_cover_objective(state): 
-	""" Number of vertices used in solution """
-	problem = state.problem
-	solution = state.solution 
-
-	# INSERT CODE HERE
 	# If solution violates hard constraint, score should be infinity (invalid) -- worst score for min
 	# Hint: use problem.find_hard_violation
 	# Count vertices included in the solution

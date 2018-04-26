@@ -3,7 +3,7 @@ from problem import maxone,knapsack,vertex_cover
 from solver.ls import StochasticLocalSearchSolver
 from solver.sa import AnnealingSolver
 from fn.ls import *
-from fn.objective import * 
+from fn.objective import *
 from fn.custom import *
 from utils import *
 
@@ -37,8 +37,8 @@ def test1():
     # See check/p3.1.txt for correct answer
 
 def test2():
-    problem_name = 'knapsack'
-    # problem_name = 'vertex_cover'
+    # problem_name = 'knapsack'
+    problem_name = 'vertex_cover'
 
     config = common_config()
     problem = select_problem(problem_name,config)
@@ -136,9 +136,9 @@ def select_problem(problem_name,config,case_number=None):
         config.best_fn = max
         config.best_possible_score = problem.N
         if config.comparison_option == 'no_degradation':
-            config.compare_fn = greater_than_equal 
+            config.compare_fn = greater_than_equal
         else: # always improve
-            config.compare_fn = greater_than 
+            config.compare_fn = greater_than
     elif problem_name == 'knapsack':
         test_case = case_number if case_number is not None else 3
         problem = knapsack.problem(test_case=test_case)
@@ -146,9 +146,9 @@ def select_problem(problem_name,config,case_number=None):
         config.best_fn = max
         config.best_possible_score = problem.total_value
         if config.comparison_option == 'no_degradation':
-            config.compare_fn = greater_than_equal 
+            config.compare_fn = greater_than_equal
         else: # always improve
-            config.compare_fn = greater_than 
+            config.compare_fn = greater_than
     elif problem_name == 'vertex_cover':
         test_case = case_number if case_number is not None else 5
         problem = vertex_cover.problem(test_case=test_case)
@@ -156,9 +156,9 @@ def select_problem(problem_name,config,case_number=None):
         config.best_fn = min
         config.best_possible_score = 0
         if config.comparison_option == 'no_degradation':
-            config.compare_fn = less_than_equal 
+            config.compare_fn = less_than_equal
         else: # always improve
-            config.compare_fn = less_than 
+            config.compare_fn = less_than
 
     return problem
 
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 1
+    test = 2
 
     if test == 1:
         test1()
@@ -180,4 +180,3 @@ if __name__ == '__main__':
     end = time.time()
     elapsed = end - start
     print('Test %d, Time elapsed: %ds' % (test,elapsed))
-
