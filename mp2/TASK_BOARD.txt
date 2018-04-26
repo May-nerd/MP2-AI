@@ -34,10 +34,9 @@ PART 2: LOCAL SEARCH
 2.BELT: DONE
 3.EJFlow: DONE
     QnA: 2/2 (RECHECK NEED) <- Checked by BELT OK
-4.NO ONE: PROCESSING <- Dependent on other numbers
+4.EJFLow: PROCESSING <- Dependent on other numbers
     QnA: 0/4
-5.
-
+5.EJFlow: To Be Done
 
 PART 3: ADVANCED LOCAL SEARCH
 1. BELT: DONE
