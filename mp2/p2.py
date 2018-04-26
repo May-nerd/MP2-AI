@@ -83,8 +83,8 @@ def test2():
     display_solutions(problem,solver)
 
 def test3():
-    # problem_name = 'knapsack'
-    problem_name = 'vertex_cover'
+    problem_name = 'knapsack'
+    # problem_name = 'vertex_cover'
 
     neighborhood_name = 'change1'
     # neighborhood_name = 'change2'
@@ -117,16 +117,16 @@ def test3():
     display_solutions(problem,solver)
 
 def test4():
-    problem_name = 'plants'
+    # problem_name = 'plants'
     # problem_name = 'einstein'
     # problem_name = 'magic_square'
     # problem_name = 'magic_series'
     # problem_name = 'knapsack'
-    # problem_name = 'vertex_cover'
+    problem_name = 'vertex_cover'
 
-    solver_name = 'hill_climb'
+    # solver_name = 'hill_climb'
     # solver_name = 'hill_walk'
-    # solver_name = 'random_walk'
+    solver_name = 'random_walk'
 
     problem = select_problem(problem_name)
     config = common_config()
@@ -159,15 +159,15 @@ def test4():
     display_solutions(problem,solver)
 
 def test5():
-    problem_name,test_case = 'knapsack',2
+    # problem_name,test_case = 'knapsack',2
     # problem_name,test_case = 'knapsack',3
     # problem_name,test_case = 'vertex_cover',3
-    # problem_name,test_case = 'vertex_cover',5
+    problem_name,test_case = 'vertex_cover',5
 
-    tenure = 0
+    # tenure = 0
     # tenure = 3
     # tenure = 5
-    # tenure = 7
+    tenure = 7
 
 
     config = common_config()
@@ -261,7 +261,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 5
 
     if test == 1:
         test1()
