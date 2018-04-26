@@ -54,14 +54,14 @@ def test2():
     # See check/p3.2.txt for example answer
 
 def test3():
-    problem_name = 'maxone'
+    # problem_name = 'maxone'
     # problem_name = 'knapsack'
-    # problem_name = 'vertex_cover'
+    problem_name = 'vertex_cover'
 
-    generator_name = 'change1'
+    # generator_name = 'change1'
     # generator_name = 'change2'
     # generator_name = 'swap2'
-    # generator_name = 'custom'
+    generator_name = 'custom'
 
     config = common_config()
     problem = select_problem(problem_name,config)
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 3
 
     if test == 1:
         test1()
