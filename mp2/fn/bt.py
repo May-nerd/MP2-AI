@@ -74,14 +74,10 @@ def custom_value_ordering(state,variable):
 	problem = state.problem
 	domain = state.domain[variable]
 
-	# INSERT CODE HERE
-	# Write your value ordering code here 
-	# Return sorted values, accdg. to some heuristic
-
-	new_state = state.copy()
-	new_domain = new_state.domain[variable]
-	print('values: ', domain)
-	print('new_state', new_state)
+	for value in domain:
+		new_state = state.copy()
+		new_state.assign(variable, value)
+		forward_checking(new_state, variable)
 
 	return domain
 	# Suggestions:
@@ -115,7 +111,4 @@ def forward_checking(state,variable):
 
 				pass_test = constraint.test(new_solution)
 				if pass_test:
-					valid_values.append(value)
-
-			state.domain[other_var] = valid_values
-
+					valid_values.a
