@@ -78,8 +78,8 @@ def test2():
     print('%s \t %s \t limit = %d' % (problem_name,option,solution_limit))
 
 def test3():
-    # problem_name = 'plants'
-    problem_name = 'einstein'
+    problem_name = 'plants'
+    # problem_name = 'einstein'
     # problem_name = 'magic_square'
     # problem_name = 'magic_series'
     # problem_name = 'knapsack'

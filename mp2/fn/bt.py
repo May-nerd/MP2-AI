@@ -6,31 +6,31 @@ def first_unassigned(state):
 	problem = state.problem
 	solution = state.solution
 
-	unassigned_vars = problem.unassigned_variables(solution)	
+	unassigned_vars = problem.unassigned_variables(solution)
 	return unassigned_vars[0]
 
 def random_unassigned(state):
 	problem = state.problem
 	solution = state.solution
 
-	unassigned_vars = problem.unassigned_variables(solution)	
+	unassigned_vars = problem.unassigned_variables(solution)
 	return random.choice(unassigned_vars)
 
 def custom_variable_selector(state):
 	problem = state.problem
 	solution = state.solution
-	domain = state.domain 
+	domain = state.domain
 
 	# INSERT CODE HERE
-	# Write your variable ordering code here 
-	# Return an unassigned variable 
+	# Write your variable ordering code here
+	# Return an unassigned variable
 
 	unassigned_vars = problem.unassigned_variables(solution)
 	# ++++++++++++++++++++++++++++++++++++++++
 	# HEURISTIC 1
 	minimum = unassigned_vars[0]
 	if(len(domain[minimum]) == 0):
-		return minimum	
+		return minimum
 	for var in unassigned_vars:
 		if(len(domain[var]) < len(domain[minimum])):
 			minimum = var
@@ -48,7 +48,7 @@ def custom_variable_selector(state):
 
 
 
-	# Suggestions: 
+	# Suggestions:
 	# Heuristic 1: minimum remaining values = select variables with fewer values left in domain
 	# Heuristic 2: degree heuristic = select variables related to more constraints
 	# Can use just one heuristic, or chain together heuristics (tie-break)
@@ -102,13 +102,20 @@ def forward_checking(state,variable):
 
 		for other_var in constraint.variables:
 			if other_var == variable: continue # skip self
-			if other_var in solution: continue # skip assigned 
+			if other_var in solution: continue # skip assigned
 
 			valid_values = []
 			for value in state.domain[other_var]:
 				new_solution = solution.copy()
-				new_solution[other_var] = value 
+				new_solution[other_var] = value
 
 				pass_test = constraint.test(new_solution)
 				if pass_test:
+<<<<<<< HEAD
 					valid_values.a
+=======
+					valid_values.append(value)
+
+			state.domain[other_var] = valid_values
+	
+>>>>>>> 9d9520aa00a21f88b765f8817023d4c9603d8fbe

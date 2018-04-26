@@ -39,8 +39,6 @@ def change_upto_two_values(state):
 			neighbor.changes = [(var[0], value[0]), (var[1], value[1])]
 			neighbors.append(neighbor)
 	return neighbors
-
-
 	# INSERT CODE HERE
 	# could change one value or two values
 	# Hints for changing 2 values:
@@ -65,13 +63,11 @@ def swap_two_values(state):
 			neighbors.append(neighbor)
 	return neighbors
 
-
 	# INSERT CODE HERE
 	# Hints:
 	# use itertools.combinations
 	# dont swap same values
 	# update neighbor.changes
-
 
 ### NEIGHBOR GENERATORS ###
 
