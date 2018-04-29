@@ -143,6 +143,8 @@ class MagicSeries(Constraint):
 	def test(self,solution):
 		values = self.get_assigned_values(solution)
 
+		print("values ", values)
+		print("variables ", self.variables)
 		if(len(values) != len(self.variables)):
 			return True
 

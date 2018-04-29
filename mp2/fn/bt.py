@@ -31,6 +31,7 @@ def custom_variable_selector(state):
 	minimum = unassigned_vars[0]
 	if(len(domain[minimum]) == 0):
 		return minimum
+
 	for var in unassigned_vars:
 		if(len(domain[var]) < len(domain[minimum])):
 			minimum = var
@@ -74,12 +75,40 @@ def custom_value_ordering(state,variable):
 	problem = state.problem
 	domain = state.domain[variable]
 
+	if(len(domain) == 0):
+		return domain
+
+	num_domain = 0
+	for d, v in state.domain.items():
+		num_domain = num_domain + len(v)
+
+	num_new_state = []
 	for value in domain:
 		new_state = state.copy()
 		new_state.assign(variable, value)
 		forward_checking(new_state, variable)
 
-	return domain
+		temp = 0
+		for d, v in new_state.domain.items():
+			temp = temp + len(v)
+		num_new_state.append(temp)
+
+	num_new_state[:] = [num_domain - num for num in num_new_state]
+	print(len(num_new_state))
+
+	temp = {}
+	for i in range(len(num_new_state)):
+		temp[domain[i]] = num_new_state[i]
+
+	import operator
+	temp = sorted(temp.items(), key=operator.itemgetter(1))
+	print(temp)
+
+	new_domain = []
+	for i in temp:
+		new_domain.append(i[0])
+
+	return new_domain
 	# Suggestions:
 	# Heuristic: least constraining value (LCV)
 	# LCV = prioritize values that filter out fewer values in other variables' domains
@@ -111,11 +140,5 @@ def forward_checking(state,variable):
 
 				pass_test = constraint.test(new_solution)
 				if pass_test:
-<<<<<<< HEAD
-					valid_values.a
-=======
 					valid_values.append(value)
-
 			state.domain[other_var] = valid_values
-	
->>>>>>> 9d9520aa00a21f88b765f8817023d4c9603d8fbe
