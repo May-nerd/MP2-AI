@@ -261,7 +261,7 @@ if __name__ == '__main__':
     import time
     start = time.time()
 
-    test = 2
+    test = 3
 
     if test == 1:
         test1()
